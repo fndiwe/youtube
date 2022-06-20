@@ -35,15 +35,16 @@ def home(request):
 
 def select(request):
     global res480, res720, res1080, audio, subtitle, res720_filesize, res480_filesize, res1080_filesize
+    video = yt
     try:
-        title = yt.title
-        image = yt.thumbnail_url
-        length = yt.length
+        title = video.title
+        image = video.thumbnail_url
+        length = video.length
         minutes = floor(length / 60)
-        res480 = yt.streams.get_by_itag(135)
-        res720 = yt.streams.get_by_itag(22)
-        res1080 = yt.streams.get_by_itag(137)
-        audio = yt.streams.get_by_itag(251)
+        res480 = video.streams.get_by_itag(135)
+        res720 = video.streams.get_by_itag(22)
+        res1080 = video.streams.get_by_itag(137)
+        audio = video.streams.get_by_itag(251)
     except:
         return redirect("home")
     try:
@@ -158,9 +159,10 @@ def audio(request):
 
 
 def select_video(request):
-    global context, all_videos, video_ids
+    global all_videos, context
+    input = search
     try:
-        results = Search(query=search).fetch_query()
+        results = Search(query=input).fetch_query()
     except:
         return HttpResponseRedirect("/")
     contents = \
@@ -175,10 +177,11 @@ def select_video(request):
             all_videos = all_video["videoRenderer"]
         except KeyError:
             pass
-        video_ids.append(all_videos["videoId"])
         # image = all_videos["thumbnail"]["thumbnails"][0]["url"]
+        video_ids.append(all_videos["videoId"])
         titles.append(all_videos["title"]["runs"][0]["text"])
         lengths.append(all_videos["lengthText"]["accessibility"]["accessibilityData"]["label"])
+
         context = {"year": datetime.now().year, "titles": titles, "lengths": lengths, "video_ids": video_ids, "zip": zip(titles, video_ids, lengths)}
     return render(request, "selectvideo.html", context)
 

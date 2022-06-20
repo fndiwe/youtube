@@ -26,7 +26,7 @@
     <meta property="og:title" content="Youtube Downloader">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="{% url 'home' %}" data-home-page-title="Home" class="u-body u-overlap u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-10db" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><style class="u-sticky-style" data-style-id="f115">.u-sticky-fixed.u-sticky-f115:before, .u-body.u-sticky-fixed .u-sticky-f115:before {
+  <body style="text-align: center" data-home-page="{% url 'home' %}" data-home-page-title="Home" class="u-body u-overlap u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-10db" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction=""><style class="u-sticky-style" data-style-id="f115">.u-sticky-fixed.u-sticky-f115:before, .u-body.u-sticky-fixed .u-sticky-f115:before {
 borders: top right bottom left !important; border-color: #404040 !important; border-width: 3px !important
 }</style><div class="u-clearfix u-sheet u-sheet-1">
         <a href="{% url 'home' %}" class="u-image u-logo u-image-1" data-image-width="378" data-image-height="53">
@@ -35,7 +35,7 @@ borders: top right bottom left !important; border-color: #404040 !important; bor
         <h1 class="u-text u-text-custom-color-1 u-text-default-lg u-text-default-md u-text-default-xl u-text-1">Download Youtube Videos for FREE</h1>
         <form action="{% url 'home' %}" method="post" class="u-border-1 u-border-grey-30 u-expanded-width-xs u-radius-17 u-search u-search-left u-white u-search-1">
           {% csrf_token %}
-          <input id="tags" class="u-search-input" type="text" name="link" placeholder="Search or Paste link here...">
+          <input class="u-search-input" type="text" name="link" placeholder="Search or Paste link here...">
           <button class="u-search-button" type="submit">
 
             <span class="u-search-icon u-spacing-10">
@@ -46,7 +46,7 @@ borders: top right bottom left !important; border-color: #404040 !important; bor
         </form>
       </div></header>
 
-    <section class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-right-xl u-clearfix u-image u-section-1" id="carousel_bc99" data-image-width="1280" data-image-height="853">
+    <section style="text-align: center" class="u-align-center-md u-align-center-sm u-align-center-xs u-align-left-lg u-align-right-xl u-clearfix u-image u-section-1" id="carousel_bc99" data-image-width="1280" data-image-height="853">
 {% if messages %}
 {% for message in messages %}
 <p style="color: red">{{ message }}</p>

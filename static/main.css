@@ -16114,7 +16114,7 @@ blockquote small:before,
 blockquote .small:before {
   content: '\2014   \A0';
 }
-.u-search {
+.uu-search {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -37006,8 +37006,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-logo-image-1 {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 
 .u-header .u-text-1 {
@@ -37016,8 +37016,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-header .u-search-1 {
-  width: 380px;
-  min-height: 73px;
+  width: 280px;
+  min-height: 60px;
   margin: 51px 32px 29px auto;
 }
 @media (max-width: 1199px) {
@@ -37047,7 +37047,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 991px) {
   .u-header .u-sheet-1 {
-    min-height: 450px;
+    min-height: 400px;
   }
 
   .u-header .u-image-1 {
@@ -37126,8 +37126,8 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-logo-image-1 {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 }
 
 .u-footer .u-social-icons-1 {
