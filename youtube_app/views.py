@@ -161,8 +161,8 @@ def audio(request):
 
 def select_video(request, search):
     global context
+    input = search
     try:
-        input = search
         results = Search(query=input).fetch_query()
     except:
         return HttpResponseRedirect("/")
