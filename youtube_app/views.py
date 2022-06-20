@@ -16,7 +16,7 @@ url2 = "https://youtu.be/"
 
 # Create your views here.
 def home(request):
-    global yt, search
+    global yt
     if request.method == 'POST':
         link = request.POST.get('link')
         search = ""
@@ -28,7 +28,7 @@ def home(request):
         except:
             messages.error(request, "There was an error getting the video, try again")
         else:
-            return redirect("select")
+            return redirect("select", search=search)
 
     return render(request, 'index.html', {"year": datetime.now().year})
 
@@ -158,7 +158,7 @@ def audio(request):
     return response
 
 
-def select_video(request):
+def select_video(request, search):
     global all_videos, context
     input = search
     try:
