@@ -16,14 +16,13 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # SECRET_KEY = 'django-insecure-d41gj0-f^not$ul$arym5drt_8xl)r*$y)83z9pewm=3*uwyp='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DEBUG']
+DEBUG = False
 
 ALLOWED_HOSTS = ['youtilize-web.herokuapp.com', '127.0.0.1',
                  'localhost', 'www.youtilize-web.herokuapp.com']
 
 SECURE_HSTS_SECONDS = 3600
 SECURE_CONTENT_TYPE_NOSNIFF = True
-
 SECURE_SSL_REDIRECT = True
 SECURE_HSTS_PRELOAD = True
 CSRF_COOKIE_SECURE = True
