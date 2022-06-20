@@ -22,13 +22,13 @@ def home(request):
         search = ""
         if not link.startswith(("https://", "http://")) and link != "":
             search += link
-            return redirect("select_video")
+            return redirect("select_video", search=search)
         try:
             yt = YouTube(link)
         except:
             messages.error(request, "There was an error getting the video, try again")
         else:
-            return redirect("select", search=search)
+            return redirect("select")
 
     return render(request, 'index.html', {"year": datetime.now().year})
 
