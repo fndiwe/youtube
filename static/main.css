@@ -37011,7 +37011,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-text-1 {
   font-weight: 700;
-  margin: 60px auto 10px;
+  margin: 60px auto 20px;
 }
 
 .u-header .u-search-1 {
@@ -37026,6 +37026,7 @@ a.u-link.u-text-hover-grey-90:hover {
     margin-top: 58px;
     margin-left: 72px;
     margin-right: 72px;
+    margin-bottom: 20px
   }
 
   .u-header .u-search-1 {
