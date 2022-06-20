@@ -35,8 +35,9 @@ def home(request):
 
 def select(request):
     global res480, res720, res1080, audio, subtitle, res720_filesize, res480_filesize, res1080_filesize
-    video = yt
+
     try:
+        video = yt
         title = video.title
         image = video.thumbnail_url
         length = video.length
