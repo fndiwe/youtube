@@ -21,7 +21,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['youtilize-web.herokuapp.com', '127.0.0.1',
                  'localhost', 'www.youtilize-web.herokuapp.com']
 
-SECURE_HSTS_SECONDS = 3600
+
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 
