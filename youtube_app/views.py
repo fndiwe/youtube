@@ -160,9 +160,9 @@ def audio(request):
 
 
 def select_video(request, search):
-    global all_videos, context
-    input = search
+    global context
     try:
+        input = search
         results = Search(query=input).fetch_query()
     except:
         return HttpResponseRedirect("/")
@@ -179,11 +179,13 @@ def select_video(request, search):
         except KeyError:
             pass
         # image = all_videos["thumbnail"]["thumbnails"][0]["url"]
-        video_ids.append(all_videos["videoId"])
-        titles.append(all_videos["title"]["runs"][0]["text"])
-        lengths.append(all_videos["lengthText"]["accessibility"]["accessibilityData"]["label"])
+        else:
+            video_ids.append(all_videos["videoId"])
+            titles.append(all_videos["title"]["runs"][0]["text"])
+            lengths.append(all_videos["lengthText"]["accessibility"]["accessibilityData"]["label"])
 
-        context = {"year": datetime.now().year, "titles": titles, "lengths": lengths, "video_ids": video_ids, "zip": zip(titles, video_ids, lengths)}
+        context = {"year": datetime.now().year, "titles": titles, "lengths": lengths, "video_ids": video_ids,
+                   "zip": zip(titles, video_ids, lengths)}
     return render(request, "selectvideo.html", context)
 
 
