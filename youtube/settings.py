@@ -19,7 +19,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['youtilize-web.herokuapp.com', '127.0.0.1',
-                 'localhost','www.youtilize-web.herokuapp.com' ]
+                 'localhost', 'www.youtilize-web.herokuapp.com']
 
 SECURE_HSTS_SECONDS = 3600
 
