@@ -34,8 +34,7 @@ def home(request):
 
 
 def select(request):
-    global res480, res720, res1080, audio, subtitle, res720_filesize, res480_filesize, res1080_filesize
-
+    global res480, res720, res1080, audio, subtitle, res720_filesize, res480_filesize, res1080_filesize, yt
     try:
         video = yt
         title = video.title
@@ -61,6 +60,9 @@ def select(request):
         res1080_filesize = round(float(res1080.filesize / 1000000), 1)
     except:
         res1080_filesize = 0
+
+    yt += ""
+
     context = {
         "title": title,
         "image": image,
