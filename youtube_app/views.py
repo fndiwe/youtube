@@ -47,6 +47,7 @@ def select(request):
         res1080 = video.streams.get_by_itag(137)
         audio = video.streams.get_by_itag(251)
     except:
+        messages.error(request, "Sorry, try again")
         return HttpResponseRedirect("/")
     try:
         res480_filesize = round(float(res480.filesize / 1000000), 1)
