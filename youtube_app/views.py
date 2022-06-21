@@ -61,8 +61,6 @@ def select(request):
     except:
         res1080_filesize = 0
 
-    yt += ""
-
     context = {
         "title": title,
         "image": image,
