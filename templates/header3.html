@@ -35,7 +35,7 @@ borders: top right bottom left !important; border-color: #404040 !important; bor
         </a>
         <h1 class="u-align-center u-text u-text-default u-text-palette-4-light-1 u-text-1">Download Youtube&nbsp; Videos&nbsp; for&nbsp; FREE</h1>
         <form action="{% url 'home' %}" method="post" class="u-border-1 u-border-grey-30 u-radius-17 u-search u-search-left u-white u-search-1">
-
+ {% csrf_token %}
           <input class="u-search-input" type="text" name="link" value="" placeholder="Search or Paste link here...">
             <button class="u-search-button" type="submit">
             <span class="u-search-icon u-spacing-10">
