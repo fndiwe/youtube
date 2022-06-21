@@ -5,3 +5,10 @@ sqlparse
 pytube
 gunicorn
 django-heroku
+python-decouple
+appdirs
+packaging
+pyparsing==3.0.9
+six
+whitenoise
+psycopg2
