@@ -37,7 +37,7 @@ def select(request):
     global res480, res720, res1080, audio, subtitle, res720_filesize, res480_filesize, res1080_filesize
 
     try:
-        video = yt
+        video = yt or yt1
         title = video.title
         image = video.thumbnail_url
         length = video.length
@@ -190,12 +190,12 @@ def select_video(request, search):
 
 
 def get_link(request, video_id):
-    global yt
+    global yt1
     try:
-        yt = YouTube(url1 + video_id)
+        yt1 = YouTube(url1 + video_id)
     except:
         try:
-            yt = YouTube(url2 + video_id)
+            yt1 = YouTube(url2 + video_id)
         except:
             messages.error(request, "The link to the video was not found")
 
